@@ -2,19 +2,20 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/:vendor_name/:package_name.svg?style=flat-square)](https://packagist.org/packages/:vendor_name/:package_name)
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/:vendor_name/:package_name/run-tests?label=tests)](https://github.com/:vendor_name/:package_name/actions?query=workflow%3ATests+branch%3Amaster)
-[![Total Downloads](https://img.shields.io/packagist/dt/:vendor_name/:package_name.svg?style=flat-square)](https://packagist.org/packages/:vendor_name/:package_name)
+![GitHub Downloads all releases](https://img.shields.io/github/downloads/:vendor_name/:package_name/total)
 
-**Note:** Run `./configure-skeleton` to get started, or manually replace  ```:author_name``` ```:author_username``` ```:author_email``` ```:vendor_name``` ```:package_name``` ```:package_description``` with their correct values in [README.md](README.md), [CHANGELOG.md](CHANGELOG.md), [CONTRIBUTING.md](.github/CONTRIBUTING.md), [LICENSE.md](LICENSE.md) and [composer.json](composer.json) files, then delete this line. You can also run `configure-skeleton.sh` to do this automatically.
+**Note:** Run `./configure-skeleton.sh` (POSIX) or `.\Configure-Skeleton.ps1` (Win) to get started
 
 This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
 
-## Support us
+## Credits
 
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/package-skeleton-laravel.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/package-skeleton-laravel)
+### Mankato Clinic
+Open-source MCDev software and components are developed and by the small but dedicated programming team at [Mankato Clinic](http://www.mankatoclinic.com/), a doctor-owned multi-specialty healthcare provider in southern Minnesota, USA. See more in the [CREDITS](CREDITS.md) documentation page for more information.
 
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
+### Upstream Contributor Credits
 
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+MCDev software, including this package, has benefited from the work of many incredible individual and organizational open-source contributors and the open-source user community. For a list of just some of the major contributors that have empowered our work, please see the [CREDITS](CREDITS.md) documentation page.
 
 ## Installation
 
@@ -27,13 +28,13 @@ composer require :vendor_name/:package_name
 You can publish and run the migrations with:
 
 ```bash
-php artisan vendor:publish --provider="Spatie\Skeleton\SkeletonServiceProvider" --tag="migrations"
+php artisan vendor:publish --provider="MCDev\:package_name\ServiceProvider" --tag="migrations"
 php artisan migrate
 ```
 
 You can publish the config file with:
 ```bash
-php artisan vendor:publish --provider="Spatie\Skeleton\SkeletonServiceProvider" --tag="config"
+php artisan vendor:publish --provider="MCDev\:package_name\ServiceProvider" --tag="config"
 ```
 
 This is the contents of the published config file:
@@ -46,8 +47,8 @@ return [
 ## Usage
 
 ```php
-$skeleton = new Spatie\Skeleton();
-echo $skeleton->echoPhrase('Hello, Spatie!');
+$example = new MCDev\Bootstrap();
+echo $example->echoPhrase('Hello, world!');
 ```
 
 ## Testing
@@ -58,21 +59,18 @@ composer test
 
 ## Changelog
 
-Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
+Please see [CHANGELOG](CHANGELOG.md) for more information on recent changes. We try to include both MCDev and upstream change notes.
 
 ## Contributing
 
-Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
+Code contributions and feature ideas are welcome! Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
 
 ## Security Vulnerabilities
 
 Please review [our security policy](../../security/policy) on how to report security vulnerabilities.
 
-## Credits
-
-- [:author_name](https://github.com/:author_username)
-- [All Contributors](../../contributors)
-
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+This package is published under the MIT License (MIT) and intended to be free to use in both commercial and non-commercial projects. 
+
+Please see the [LICENSE](LICENSE.md) document for more information.
