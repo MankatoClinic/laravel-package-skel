@@ -1,12 +1,12 @@
 <?php
 
-namespace Spatie\Skeleton\Commands;
+namespace MCDev\Laraskel\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class LaraskelCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'Laraskel';
 
     public $description = 'My command';
 

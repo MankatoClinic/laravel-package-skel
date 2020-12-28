@@ -9,7 +9,7 @@ Copyright (c) :author_name <:author_email>, :org_name <:org_homepage>.
 
 #### Upstream Copyrights
 
-Package skeleton was forked from spatie/package-skeleton-laravel, Copyright (c) Spatie bvba <info@spatie.be>, licensed under The MIT License.
+Package Laraskel was forked from spatie/package-Laraskel-laravel, Copyright (c) Spatie bvba <info@spatie.be>, licensed under The MIT License.
 
 ## The MIT License (MIT)
 

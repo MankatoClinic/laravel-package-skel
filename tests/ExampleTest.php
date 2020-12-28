@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\Skeleton\Tests;
+namespace MCDev\Laraskel\Tests;
 
 class ExampleTest extends TestCase
 {

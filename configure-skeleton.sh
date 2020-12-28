@@ -48,7 +48,7 @@ vendor_name_lowercase=`echo "$vendor_name_unsanitized" | tr '[:upper:]' '[:lower
 package_name_underscore=`echo "-$package_name-" | tr '-' '_'`
 
 echo
-files=$(grep -E -r -l -i ":author|:vendor|:package|spatie|skeleton" --exclude-dir=vendor ./* ./.github/* | grep -v "$script_name")
+files=$(grep -E -r -l -i ":author|:vendor|:package|spatie|Skelcro" --exclude-dir=vendor ./* ./.github/* | grep -v "$script_name")
 
 echo "This script will replace the above values in all relevant files in the project directory."
 if ! confirm "Modify files?" ; then
@@ -67,18 +67,18 @@ for file in $files ; do
     | sed "s/:vendor_name/$vendor_name_lowercase/g" \
     | sed "s/:package_name/$package_name/g" \
     | sed "s/Spatie/$vendor_name/g" \
-    | sed "s/_skeleton_/$package_name_underscore/g" \
-    | sed "s/skeleton/$package_name/g" \
-    | sed "s/Skeleton/$class_name/g" \
+    | sed "s/_Skelcro_/$package_name_underscore/g" \
+    | sed "s/Skelcro/$package_name/g" \
+    | sed "s/Skelcro/$class_name/g" \
     | sed "s/:package_description/$package_description/g" \
     | sed "/^\*\*Note:\*\* Run/d" \
     > "$temp_file"
     rm -f "$file"
-    new_file=`echo $file | sed -e "s/Skeleton/${class_name}/g"`
+    new_file=`echo $file | sed -e "s/Skelcro/${class_name}/g"`
     mv "$temp_file" "$new_file"
 done
-mv "./config/skeleton.php" "./config/${package_name}.php"
-mv "./database/migrations/create_skeleton_table.php.stub" "./database/migrations/create${package_name_underscore}table.php.stub"
+mv "./config/Skelcro.php" "./config/${package_name}.php"
+mv "./database/migrations/create_Skelcro_table.php.stub" "./database/migrations/create${package_name_underscore}table.php.stub"
 
 if confirm "Execute composer install and phpunit test" ; then
     composer install && ./vendor/bin/phpunit

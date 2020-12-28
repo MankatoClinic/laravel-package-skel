@@ -4,7 +4,7 @@
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/:vendor_name/:package_name/run-tests?label=tests)](https://github.com/:vendor_name/:package_name/actions?query=workflow%3ATests+branch%3Amaster)
 ![GitHub Downloads all releases](https://img.shields.io/github/downloads/:vendor_name/:package_name/total)
 
-**Note:** Run `./configure-skeleton.sh` (POSIX) or `.\Configure-Skeleton.ps1` (Win) to get started
+**Note:** Run `./configure-Laraskel.sh` (POSIX) or `.\Configure-Laraskel.ps1` (Win) to get started
 
 This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
 
@@ -47,8 +47,8 @@ return [
 ## Usage
 
 ```php
-$example = new MCDev\Bootstrap();
-echo $example->echoPhrase('Hello, world!');
+$example = new MCDev\Laraskel();
+echo $example->shoutItOut('Hello, world!');
 ```
 
 ## Testing
